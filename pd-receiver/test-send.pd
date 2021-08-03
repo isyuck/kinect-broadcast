@@ -1,0 +1,34 @@
+#N canvas 262 548 555 299 12;
+#X msg 98 164 connect 127.0.0.1 9997;
+#X obj 455 330 packOSC;
+#X obj 92 189 netsend;
+#X obj 92 213 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 92 141 packOSC;
+#X floatatom 94 59 5 0 0 2 x - -;
+#X floatatom 135 59 5 0 0 2 y - -;
+#X floatatom 179 59 5 0 0 2 z - -;
+#X obj 234 38 bng 15 250 50 0 empty empty open_hand 19 7 1 11 -4034
+-1 -1;
+#X obj 327 38 bng 15 250 50 0 empty empty close_hand 19 7 1 11 -260097
+-1 -1;
+#X msg 327 58 0;
+#X msg 234 58 1;
+#X msg 92 113 send /k/l/x \$1;
+#X msg 202 113 send /k/l/y \$1;
+#X msg 314 113 send /k/l/z \$1;
+#X msg 425 113 send /k/l/open \$1;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 4 0 2 0;
+#X connect 5 0 12 0;
+#X connect 6 0 13 0;
+#X connect 7 0 14 0;
+#X connect 8 0 11 0;
+#X connect 9 0 10 0;
+#X connect 10 0 15 0;
+#X connect 11 0 15 0;
+#X connect 12 0 4 0;
+#X connect 13 0 4 0;
+#X connect 14 0 4 0;
+#X connect 15 0 4 0;
